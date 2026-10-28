@@ -5,18 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Rafael Pacheco Balceiro — História & Projetos</title>
 <meta name="description" content="Empreendedor, desenvolvedor independente e escritor. Conheça a história, as pesquisas e o portfólio de Rafael Pacheco Balceiro.">
-<meta name="theme-color" content="#101210">
+<meta name="theme-color" content="#080808">
 <link rel="canonical" href="https://rafylsckindustries.com.br/rafael/">
 <meta property="og:title" content="Rafael Pacheco Balceiro — História & Projetos">
 <meta property="og:description" content="Empreendedor, desenvolvedor independente e escritor. Conheça a história, as pesquisas e o portfólio de Rafael Pacheco Balceiro.">
 <meta property="og:image" content="https://rafylsckindustries.com.br/banner.png">
 <meta property="og:type" content="website">
 <link rel="icon" href="/assets/icons/favicon-32.png">
-<link rel="stylesheet" href="/css/editorial.css?v=20261028">
-<script src="/js/editorial.js?v=20261028" defer>
+<link rel="stylesheet" href="/css/fonts.css?v=mono1">
+<link rel="stylesheet" href="/css/editorial.css?v=mono1">
+<link rel="stylesheet" href="/css/motion.css?v=mono1">
+<script src="/js/editorial.js?v=mono1" defer>
 </script>
 </head>
 <body>
+<div class="reading-progress" aria-hidden="true">
+</div>
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <header class="masthead">
 <div class="wrap header-row">
@@ -125,8 +129,16 @@
 </div>
 <p>Produtos, pesquisas e histórias. Explore os projetos e as frentes de trabalho que fazem parte deste portfólio.</p>
 </div>
+<div class="portfolio-toolbar">
+<div class="search-wrap">
 <label class="search-label" for="project-search">Encontre um projeto, tema ou tecnologia</label>
-<input class="search" id="project-search" type="search" placeholder="Buscar por nome ou assunto…">
+<input class="search" id="project-search" type="search" placeholder="Buscar por nome ou assunto…" aria-controls="project-catalogue">
+</div>
+<div class="view-toggle" role="group" aria-label="Visualização do portfólio">
+<button data-view="grid" aria-pressed="true">▦ Grade</button>
+<button data-view="list" aria-pressed="false">☷ Lista</button>
+</div>
+</div>
 <div class="filters" aria-label="Filtrar projetos por área">
 <button class="filter" data-category="Todos" aria-pressed="true">Todos</button>
 <button class="filter" data-category="Software" aria-pressed="false">Software</button>
@@ -140,7 +152,7 @@
 <noscript>
 <p>Todos os projetos estão listados abaixo. Ative JavaScript para usar a busca e os filtros.</p>
 </noscript>
-<div class="catalogue">
+<div class="catalogue" id="project-catalogue">
 <article id="autozap" data-category="Software">
 <span class="tag">Software</span>
 <h3>AutoZap</h3>
@@ -366,7 +378,8 @@
 </div>
 </article>
 </div>
-<p class="empty" id="empty" hidden>Nenhum projeto encontrado. Experimente outro termo ou selecione “Todos”.</p>
+<p class="empty" id="empty" hidden>Nenhum projeto encontrado. Experimente outro termo ou selecione “Todos”.<button class="reset-search" type="button">Limpar busca e filtros</button>
+</p>
 <p class="source-note">Algumas entradas agrupam módulos e linhas de experimentação relacionadas. Conceitos e protótipos não são apresentados como produtos disponíveis ou resultados comprovados.</p>
 </section>
 <section class="section wrap">
@@ -440,8 +453,8 @@
 </section>
 <section class="section wrap">
 <p class="eyebrow">Uma visão pessoal</p>
-<blockquote style="margin:25px 0;max-width:1000px">
-<p style="font-family:'Instrument Serif',serif;font-size:clamp(34px,4.5vw,62px);line-height:1.2">“A identidade do cérebro é irrelevante, o que importa é a estrutura das ideias que ele produz.”</p>
+<blockquote class="quote">
+<p>“A identidade do cérebro é irrelevante, o que importa é a estrutura das ideias que ele produz.”</p>
 <footer class="tag">Rafael Pacheco Balceiro · Outubro de 2026</footer>
 </blockquote>
 </section>
@@ -453,8 +466,13 @@
 </h2>
 <p>Produtos, pesquisa e possibilidades de colaboração.</p>
 </div>
+<div class="contact-actions">
 <a class="pill" href="mailto:contato@rafylsckindustries.com.br">Entrar em contato <span>↗</span>
 </a>
+<button class="copy-email" type="button">Copiar endereço de e-mail ↗</button>
+<span class="copy-status" role="status" aria-live="polite">
+</span>
+</div>
 </div>
 </section>
 </main>
@@ -469,5 +487,9 @@
 </div>
 </div>
 </footer>
+<button class="motion-toggle" type="button" aria-pressed="false">
+<span aria-hidden="true">Ⅱ</span>
+<span class="motion-label">Pausar animações</span>
+</button>
 </body>
 </html>
