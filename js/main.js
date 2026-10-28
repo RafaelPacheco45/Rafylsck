@@ -1,4 +1,3 @@
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 document.querySelectorAll("img.product-logo, img.brand-logo").forEach((img) => {
   img.addEventListener("error", function () {
@@ -56,7 +55,7 @@ sections.forEach((s) =>
   ).observe(s)
 );
 
-if (!prefersReducedMotion) {
+{
   const revealObs = new IntersectionObserver(
     (entries) => {
       entries.forEach((e) => {
@@ -69,8 +68,6 @@ if (!prefersReducedMotion) {
     { threshold: 0.08, rootMargin: "0px 0px -24px 0px" }
   );
   document.querySelectorAll(".reveal").forEach((el) => revealObs.observe(el));
-} else {
-  document.querySelectorAll(".reveal").forEach((el) => el.classList.add("is-visible"));
 }
 
 const contactForm = document.querySelector("#contact-form");
@@ -125,5 +122,5 @@ form?.addEventListener("submit", (e) => {
   const body = encodeURIComponent(
     [`Nome: ${nome}`, `E-mail: ${email}`, `Tipo de interesse: ${tipo}`, "", "Mensagem:", mensagem].join("\n")
   );
-  window.location.href = `mailto:contato@rafylsckindustries.com.br?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:rp777045@gmail.com?subject=${subject}&body=${body}`;
 });

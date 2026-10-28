@@ -950,10 +950,7 @@ address span { color: var(--text-3); font-size: 0.88rem; }
   .footer-bottom { flex-direction: column; gap: 6px; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; transition: none; }
-}
+
 
 /* Shared monochrome identity for existing product and research pages. */
 :root { --bg: #080808; --bg-2: #101010; --surface: #111; --gold: #ddd; --gold-hi: #fff; --gold-border: #555; --blue: #ccc; --blue-hi: #fff; --teal: #ccc; --teal-hi: #fff; --crimson: #ccc; --crimson-hi: #fff; --silver: #ccc; --silver-hi: #fff; --purple: #ccc; --text-3: #999; }
@@ -966,7 +963,3 @@ h1,h2,h3,.brand { font-family: 'Space Grotesk',sans-serif; letter-spacing: -.04e
 .main-nav { gap: 16px; font-size: .77rem; }
 .site-footer { padding-bottom: 65px; }
 .reading-progress { position: fixed; left: 0; top: 0; height: 2px; width: 100%; background: #fff; transform: scaleX(0); transform-origin: left; z-index: 90; pointer-events: none; }
-.motion-toggle { position: fixed; right: 20px; bottom: 20px; z-index: 45; border: 1px solid #444; border-radius: 30px; color: #ccc; background: #141414ee; font-size: 10px; padding: 10px 15px; display: flex; gap: 8px; }
-html.motion-paused *,html.motion-paused *::before,html.motion-paused *::after { animation-play-state: paused!important; transition: none!important; scroll-behavior: auto!important; }
-html.motion-paused .reveal { opacity: 1!important; transform: none!important; }
-@media(prefers-reduced-motion:reduce) { html:not(.motion-opted-in) *,html:not(.motion-opted-in) *::before,html:not(.motion-opted-in) *::after { animation: none!important; transition: none!important; } }

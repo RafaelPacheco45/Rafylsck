@@ -2,34 +2,7 @@
 'use strict';
 /* Rafylsck: small, dependency-free interactions. */
 const root = document.documentElement;
-const systemMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
-let motionPreference = null;
-try { motionPreference = localStorage.getItem('rafylsck-motion'); } catch {}
-let motionPaused = motionPreference ? motionPreference === 'paused' : systemMotion.matches;
-const motionToggle = document.querySelector('.motion-toggle');
-function syncMotion() {
-  motionPaused = motionPreference ? motionPreference === 'paused' : systemMotion.matches;
-  root.classList.toggle('motion-opted-in', motionPreference === 'playing');
-  root.classList.toggle('motion-paused', motionPaused);
-  if (motionPaused) document.getAnimations?.().forEach(animation => {
-    if (animation.effect?.getComputedTiming().iterations !== Infinity) { try { animation.finish(); } catch {} }
-  });
-  motionToggle?.setAttribute('aria-pressed', String(motionPaused));
-  const label = motionToggle?.querySelector('.motion-label');
-  if (label) label.textContent = motionPaused ? 'Ativar animações' : 'Pausar animações';
-  if (motionToggle) {
-    motionToggle.title = 'Sua preferência de animações fica salva neste navegador.';
-    motionToggle.querySelector('span').textContent = motionPaused ? '▷' : 'Ⅱ';
-  }
-}
-syncMotion();
-motionToggle?.addEventListener('click', () => {
-  motionPreference = motionPaused ? 'playing' : 'paused';
-  try { localStorage.setItem('rafylsck-motion', motionPreference); } catch {}
-  syncMotion();
-});
-systemMotion.addEventListener('change', syncMotion);
 
 const menu = document.querySelector('.menu');
 const navigation = document.querySelector('.navigation');
@@ -50,7 +23,7 @@ const filters = [...document.querySelectorAll('.filter')];
 const normalize = s => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 let category = 'Todos';
 function animateIn(element, delay = 0) {
-  if (!motionPaused && element.animate) element.animate(
+  if (element.animate) element.animate(
     [{ opacity: .25, transform: 'translateY(12px)' }, { opacity: 1, transform: 'translateY(0)' }],
     { duration: 380, delay, easing: 'cubic-bezier(.2,.7,.2,1)' }
   );
@@ -102,7 +75,7 @@ function showLinkedProject() {
     category = 'Todos'; search.value = '';
     filters.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.category === 'Todos')));
     filterProjects(false);
-    card.scrollIntoView({ block: 'center', behavior: motionPaused ? 'instant' : 'smooth' });
+    card.scrollIntoView({ block: 'center', behavior: 'smooth' });
   }
 }
 window.addEventListener('hashchange', showLinkedProject);
@@ -142,7 +115,7 @@ if ('IntersectionObserver' in window) {
   });
   root.classList.add('motion-ready');
 }
-if (!motionPaused) document.querySelectorAll('.hero-top,.hero-copy,.personal-hero h1,.personal-subtitle,.personal-aside,.universe').forEach((element, i) => animateIn(element, i * 80));
+document.querySelectorAll('.hero-top,.hero-copy,.personal-hero h1,.personal-subtitle,.personal-aside,.universe').forEach((element, i) => animateIn(element, i * 80));
 const progress = document.querySelector('.reading-progress');
 const header = document.querySelector('.masthead');
 let scheduled = false;
@@ -156,10 +129,10 @@ window.addEventListener('scroll', () => { if (!scheduled) { scheduled = true; re
 window.addEventListener('resize', updateScroll);
 updateScroll();
 
-// Pointer effects are limited to precise pointing devices and opt out with reduced motion.
+// Pointer effects are limited to precise pointing devices.
 document.querySelectorAll('.feature,.catalogue article').forEach(card => {
   card.addEventListener('pointermove', event => {
-    if (motionPaused || !finePointer.matches) return;
+    if (!finePointer.matches) return;
     const rect = card.getBoundingClientRect();
     const x = event.clientX - rect.left, y = event.clientY - rect.top;
     card.style.setProperty('--pointer-x', `${x}px`); card.style.setProperty('--pointer-y', `${y}px`);
@@ -172,8 +145,8 @@ document.querySelectorAll('.feature,.catalogue article').forEach(card => {
 });
 document.querySelector('.copy-email')?.addEventListener('click', async () => {
   const status = document.querySelector('.copy-status');
-  try { await navigator.clipboard.writeText('contato@rafylsckindustries.com.br'); status.textContent = 'E-mail copiado.'; }
-  catch { status.textContent = 'contato@rafylsckindustries.com.br'; }
+  try { await navigator.clipboard.writeText('rp777045@gmail.com'); status.textContent = 'E-mail copiado.'; }
+  catch { status.textContent = 'rp777045@gmail.com'; }
 });
 
 })();

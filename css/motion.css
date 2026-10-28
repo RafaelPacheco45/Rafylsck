@@ -72,9 +72,6 @@ h2 { letter-spacing: -.055em!important; }
 .footer { padding-bottom: 90px; }
 .footer-row { font-size: 10px; }
 .reading-progress { position: fixed; left: 0; top: 0; height: 2px; background: #fff; width: 100%; transform: scaleX(0); transform-origin: left; z-index: 90; pointer-events: none; }
-.motion-toggle { position: fixed; bottom: 20px; right: 22px; z-index: 30; display: flex; align-items: center; gap: 9px; background: #141414ee; color: #ccc; border: 1px solid #3a3a3a; border-radius: 30px; padding: 10px 15px; font-size: 10px; backdrop-filter: blur(16px); cursor: pointer; }
-.motion-toggle:hover { border-color: #aaa; }
-.motion-toggle span { font-size: 12px; }
 /* An explorable map, not an illustration of product metrics. */
 .universe { position: relative; min-width: 0; }
 .universe-stage { position: relative; height: 405px; background: radial-gradient(ellipse at center,#ffffff08 0,transparent 65%); }
@@ -108,7 +105,6 @@ h2 { letter-spacing: -.055em!important; }
 .discipline-track { display: flex; width: max-content; animation: ticker 36s linear infinite; }
 .discipline-group { display: flex; gap: 45px; padding-right: 45px; align-items: center; font-family: 'Space Grotesk',sans-serif; font-size: 13px; letter-spacing: 3px; color: #777; text-transform: uppercase; white-space: nowrap; }
 .discipline-group span::after { content: '+'; margin-left: 45px; color: #444; }
-.discipline-strip:hover .discipline-track { animation-play-state: paused; }
 /* Personal page and portfolio controls. */
 .personal-hero { padding-top: 65px; }
 .personal-hero .hero-layout { grid-template-columns: 1.35fr .65fr; gap: 55px; padding: 22px 0; }
@@ -159,10 +155,8 @@ h2 { letter-spacing: -.055em!important; }
 .quote p { font-family: 'Space Grotesk',sans-serif; font-size: clamp(32px,4vw,56px); font-weight: 400; line-height: 1.25; letter-spacing: -.04em; color: #d5d5d5; }
 .source-note { font-size: 11px; color: #999; }
 .reveal-item { scroll-margin-top: 110px; }
-html.motion-ready:not(.motion-paused) .reveal-item { transition: opacity .7s,transform .7s; }
-html.motion-ready:not(.motion-paused) .reveal-item.is-waiting { opacity: 0; transform: translateY(24px); }
-html.motion-paused *,html.motion-paused *::before,html.motion-paused *::after { animation-play-state: paused!important; transition: none!important; scroll-behavior: auto!important; }
-html.motion-paused .reveal-item { opacity: 1!important; transform: none!important; }
+html.motion-ready .reveal-item { transition: opacity .7s,transform .7s; }
+html.motion-ready .reveal-item.is-waiting { opacity: 0; transform: translateY(24px); }
 @keyframes orbit-spin { to { transform: rotate(360deg); } }
 @keyframes ticker { to { transform: translateX(-50%); } }
 @keyframes monogram-orbit { 50% { transform: rotateX(55deg) rotate(155deg); } to { transform: rotateX(55deg) rotate(335deg); } }
@@ -218,7 +212,6 @@ html.motion-paused .reveal-item { opacity: 1!important; transform: none!importan
   .monogram { min-height: 300px; }
   .contact { padding: 65px 0; }
   .contact-actions { margin-top: 25px; }
-  .motion-toggle { right: 15px; bottom: 15px; font-size: 9px; }
   .personal-hero h1 { font-size: clamp(49px,10.4vw,74px); letter-spacing: -.065em; }
   .personal-subtitle { font-size: 14px; }
   .personal-aside { padding: 22px 0 0; margin-top: 5px; }
@@ -244,10 +237,6 @@ html.motion-paused .reveal-item { opacity: 1!important; transform: none!importan
   .quote p { font-size: 33px; }
 }
 @keyframes menu-in { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
-@media(prefers-reduced-motion:reduce) {
-  html:not(.motion-opted-in) { scroll-behavior: auto; }
-  html:not(.motion-opted-in) *,html:not(.motion-opted-in) *::before,html:not(.motion-opted-in) *::after { animation: none!important; transition: none!important; }
-  html:not(.motion-opted-in) .reveal-item { opacity: 1!important; transform: none!important; }
-}
+
 
 .copy-status { font-size: 11px; color: #bbb; }

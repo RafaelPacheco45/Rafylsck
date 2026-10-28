@@ -158,6 +158,3 @@ h1,.personal-hero h1 { font-size:62px; letter-spacing:-3px; margin:28px 0}
 .footer-links { margin-top:18px; flex-wrap:wrap}
 .personal-subtitle { font-size:27px}
 }
-@media(prefers-reduced-motion:reduce) { html:not(.motion-opted-in) { scroll-behavior:auto}
-html:not(.motion-opted-in) * { transition:none!important}
-}
