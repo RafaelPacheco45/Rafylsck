@@ -145,8 +145,8 @@ document.querySelectorAll('.feature,.catalogue article').forEach(card => {
 });
 document.querySelector('.copy-email')?.addEventListener('click', async () => {
   const status = document.querySelector('.copy-status');
-  try { await navigator.clipboard.writeText('rp777045@gmail.com'); status.textContent = 'E-mail copiado.'; }
-  catch { status.textContent = 'rp777045@gmail.com'; }
+  try { await navigator.clipboard.writeText('contato@rafylsckindustries.com.br'); status.textContent = 'E-mail copiado.'; }
+  catch { status.textContent = 'contato@rafylsckindustries.com.br'; }
 });
 
 })();

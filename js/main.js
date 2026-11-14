@@ -122,5 +122,5 @@ form?.addEventListener("submit", (e) => {
   const body = encodeURIComponent(
     [`Nome: ${nome}`, `E-mail: ${email}`, `Tipo de interesse: ${tipo}`, "", "Mensagem:", mensagem].join("\n")
   );
-  window.location.href = `mailto:rp777045@gmail.com?subject=${subject}&body=${body}`;
+  window.location.href = `mailto:contato@rafylsckindustries.com.br?subject=${subject}&body=${body}`;
 });
