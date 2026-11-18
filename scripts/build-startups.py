@@ -17,7 +17,7 @@ def head(title, description, path):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{escape(title)} | Rafylsck Industries</title>
 <meta name="description" content="{escape(description)}">
-<meta name="theme-color" content="#000000">
+<meta name="theme-color" content="#080808">
 <link rel="canonical" href="https://rafylsckindustries.com.br{path}">
 <meta property="og:title" content="{escape(title)} | Rafylsck Industries">
 <meta property="og:description" content="{escape(description)}">
@@ -26,8 +26,10 @@ def head(title, description, path):
 <link rel="icon" href="/assets/icons/favicon-32.png">
 <link rel="stylesheet" href="/css/fonts.css?v=mono2">
 <link rel="stylesheet" href="/css/editorial.css?v=mono2">
-<link rel="stylesheet" href="/css/startups.css?v=black3">
+<link rel="stylesheet" href="/css/motion.css?v=mono2">
+<link rel="stylesheet" href="/css/startups.css?v=motion4">
 <script src="/js/editorial.js?v=mono2" defer></script>
+<script src="/js/startups-motion.js?v=motion4" defer></script>
 </head>
 <body class="startups-site">
 <a class="skip" href="#conteudo">Pular para o conteúdo</a>

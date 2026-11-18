@@ -1,6 +1,6 @@
 # Área de startups
 
-A entrada `/startups/` usa fundo preto, com apenas os símbolos e nomes das cinco startups: Teseu, AutoZap, AnjoGuard, JuriX Cidadão e AdHub. Cada marca leva à sua apresentação, com ideia, público, recursos, imagens e estágio atual. Oraculum e AutoBook foram removidos apenas desta área; suas páginas originais no restante do site foram preservadas.
+A entrada `/startups/` usa o mesmo fundo #080808 da página principal, com apenas os símbolos e nomes das cinco startups: Teseu, AutoZap, AnjoGuard, JuriX Cidadão e AdHub. Cada marca leva à sua apresentação, com ideia, público, recursos, imagens e estágio atual. Oraculum e AutoBook foram removidos apenas desta área; suas páginas originais no restante do site foram preservadas.
 
 Edite `projects.json` e execute:
 
@@ -20,3 +20,7 @@ As imagens de Teseu e AutoZap são capturas existentes das interfaces. Os dados 
 ## Validação
 
 Testes verificam as seis páginas, semântica, arquivos e links locais, geração reproduzível, seletor com cinco marcas, exclusões e imagens. A revisão visual em navegador nesta sessão não foi realizada: o controle do computador foi interrompido pela ferramenta durante a tentativa anterior.
+
+## Movimento
+
+A área reutiliza `css/motion.css` para manter o tema do site. As logos entram em sequência, flutuam suavemente e respondem ao foco, mouse e toque. As apresentações usam revelação ao rolar e transição entre páginas nos navegadores compatíveis. A preferência do sistema por movimento reduzido é respeitada.

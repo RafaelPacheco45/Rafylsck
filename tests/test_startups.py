@@ -40,7 +40,7 @@ class StartupTests(unittest.TestCase):
    self.assertFalse((R/'startups'/excluded/'index.html').exists())
   self.assertNotIn('startup-filters',s)
   self.assertNotIn('hero-constellation',s)
-  self.assertIn('background:#000',(R/'css/startups.css').read_text(encoding="utf-8"))
+  self.assertIn('--bg:#080808',(R/'css/startups.css').read_text(encoding="utf-8"))
  def test_project_images_and_current_logos(self):
   for project in self.data:
    with self.subTest(project=project['id']):

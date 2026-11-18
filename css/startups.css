@@ -1,6 +1,7 @@
 /* A black canvas for the brands; project content lives on its own page. */
-.startups-site{--bg:#000;--panel:#090909;--ink:#f5f5f5;--muted:#aaa;--line:#242424;--accent:#fff;background:#000;color:var(--ink)}
-.startups-site .masthead{background:#000;border-color:#171717}
+.startups-site{--bg:#080808;--panel:#101010;--ink:#f5f5f5;--muted:#aaa;--line:#242424;--accent:#fff;background:var(--bg);color:var(--ink)}
+.startups-site .masthead{background:#080808d9;border-color:#ffffff0d}
+.startups-site .masthead.scrolled{background:#080808f5;border-color:var(--line)}
 .startups-site .navigation{font-size:.875rem}
 .startups-site .navigation .contact-link{border-color:#333}
 .startups-site .navigation a:hover{color:#fff}
@@ -56,4 +57,30 @@
 .related-startups .choice-name{font-size:1rem}
 @media(max-width:1100px){.startup-choice{width:calc((100% - 40px)/3);max-width:240px}.startup-directory{padding-top:50px;padding-bottom:65px}.startup-detail-hero{gap:30px}.detail-brand img{width:240px;height:240px}}
 @media(max-width:720px){.startups-site .wrap{width:calc(100% - 40px)}.startup-directory{min-height:calc(100svh - 200px);padding-top:30px;padding-bottom:40px}.startup-choices{gap:18px 12px}.startup-choice{width:calc((100% - 12px)/2);gap:12px;padding:20px 6px}.choice-symbol,.choice-symbol img{height:105px}.choice-symbol img{width:120px}.choice-name{font-size:1.0625rem}.startup-detail-hero{grid-template-columns:1fr;padding-top:40px;padding-bottom:50px;gap:20px}.startup-detail-hero h1{font-size:3.25rem}.detail-brand{min-height:200px;grid-row:1}.detail-brand img{height:180px;width:220px}.startup-story,.startup-capabilities{grid-template-columns:1fr;gap:24px;padding-top:45px;padding-bottom:45px}.story-lead{font-size:1.0625rem}.project-steps{grid-template-columns:1fr;gap:20px}.project-experience{padding-bottom:45px}.project-gallery{padding-top:45px;padding-bottom:45px}.gallery-grid{gap:30px}.project-stage{padding:24px}.startup-contact{padding-top:60px;padding-bottom:60px}.related-startups .startup-choice{width:calc((100% - 12px)/2)}.startups-site .footer-links{flex-wrap:wrap}}
+/* Entrance, idle movement and a clear response to selection. */
+.startup-choice{animation:startup-arrive .8s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--arrival,0ms)}
+.startup-choice:nth-child(2){--arrival:100ms;--float-delay:-1s}
+.startup-choice:nth-child(3){--arrival:200ms;--float-delay:-2.1s}
+.startup-choice:nth-child(4){--arrival:300ms;--float-delay:-3.2s}
+.startup-choice:nth-child(5){--arrival:400ms;--float-delay:-4.3s}
+.choice-symbol{transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.choice-symbol img{animation:startup-float 6s ease-in-out infinite;animation-delay:var(--float-delay,0s);transition:filter .4s}
+.startup-choice:hover .choice-symbol,.startup-choice:focus-visible .choice-symbol{transform:scale(1.09)}
+.startup-choice:hover .choice-symbol img,.startup-choice:focus-visible .choice-symbol img{filter:drop-shadow(0 10px 20px #ffffff15)}
+.choice-name{position:relative}
+.choice-name::after{content:"";position:absolute;left:15%;right:15%;bottom:-8px;height:1px;background:#ffffff70;transform:scaleX(0);transition:transform .35s}
+.startup-choice:hover .choice-name::after,.startup-choice:focus-visible .choice-name::after{transform:scaleX(1)}
+.startup-choice:active .choice-symbol{transform:scale(.94);transition-duration:.12s}
+.startup-detail-hero>div:first-child{animation:startup-arrive .8s cubic-bezier(.2,.7,.2,1) both}
+.detail-brand{animation:startup-arrive 1s .12s cubic-bezier(.2,.7,.2,1) both}
+.detail-brand img{animation:startup-float 7s ease-in-out infinite}
+@keyframes startup-arrive{from{opacity:0;translate:0 22px;filter:blur(3px)}to{opacity:1;translate:0 0;filter:blur(0)}}
+@keyframes startup-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:startup-exit .22s ease-in both}
+::view-transition-new(root){animation:startup-page-enter .35s ease-out both}
+@keyframes startup-exit{to{opacity:0;transform:translateY(-5px)}}
+@keyframes startup-page-enter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){.startups-site{scroll-behavior:auto}.startups-site *{transition:none!important;animation:none!important}}
+
+@media(prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}
