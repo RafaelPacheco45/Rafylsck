@@ -5,7 +5,7 @@
     "category": "Espaços inteligentes",
     "status": "Em desenvolvimento",
     "color": "#a5e3ca",
-    "logo": "teseu-logo.webp",
+    "logo": "teseu-symbol-v2.png",
     "headline": "O caminho entre procurar e encontrar.",
     "summary": "Navegação e descoberta de espaços para conectar visitantes, lojas e produtos.",
     "audience": "Shoppings, mercados e grandes espaços comerciais.",
@@ -21,6 +21,16 @@
       "Encontre um destino",
       "Veja o caminho",
       "Explore o espaço"
+    ],
+    "media": [
+      {
+        "file": "teseu-map.png",
+        "caption": "Demonstração de navegação indoor no guia Iguatemi Campinas. Percurso simulado sobre planta ilustrativa."
+      },
+      {
+        "file": "teseu-catalog.png",
+        "caption": "Interface móvel do catálogo de lojas do guia Iguatemi Campinas."
+      }
     ]
   },
   {
@@ -49,7 +59,16 @@
       "Automatize"
     ],
     "source": "/products/autozap/",
-    "photo": "autozap.webp"
+    "media": [
+      {
+        "file": "autozap-orders.png",
+        "caption": "Tela de ordens de serviço do AutoZap, com um cliente fictício usado em teste."
+      },
+      {
+        "file": "autozap-marketing.jpg",
+        "caption": "Interface de preparação e publicação de campanhas do AutoZap, em demonstração técnica."
+      }
+    ]
   },
   {
     "id": "anjoguard",
@@ -57,7 +76,7 @@
     "category": "Cuidado & assistência",
     "status": "Pesquisa & desenvolvimento",
     "color": "#e8d3a1",
-    "logo": "anjoguard-logo.png",
+    "logo": "anjoguard-symbol-v2.png",
     "headline": "Tecnologia mais perto de quem precisa.",
     "summary": "Pesquisa em IA, sensores e dispositivos para apoiar o cuidado de pessoas idosas.",
     "audience": "Familiares, cuidadores e contextos de assistência residencial.",
@@ -74,32 +93,50 @@
       "Organizar a rotina",
       "Apoiar o cuidado"
     ],
-    "source": "/research/anjoguard/"
+    "source": "/research/anjoguard/",
+    "media": [
+      {
+        "file": "anjoguard-product.jpg",
+        "caption": "Apresentação visual do protótipo de caixa de medicamentos AnjoGuard."
+      },
+      {
+        "file": "anjoguard-inside.jpg",
+        "caption": "Registro da montagem interna do protótipo: mecanismos, eletrônica e conexões."
+      }
+    ]
   },
   {
     "id": "jurix",
-    "name": "JuriX",
+    "name": "JuriX Cidadão",
     "category": "Acesso & conhecimento",
     "status": "Em desenvolvimento",
     "color": "#d6bcf3",
-    "logo": "jurix-logo.png",
+    "logo": "jurix-symbol-v6.png",
     "headline": "Menos barreiras. Mais clareza.",
     "summary": "Uma experiência guiada para organizar informações e tornar o contexto jurídico mais compreensível.",
     "audience": "Pessoas que precisam entender e organizar uma demanda jurídica.",
-    "about": "O JuriX parte de uma ideia simples: lidar com documentos e informações jurídicas não deveria exigir dominar uma linguagem difícil. O projeto trabalha com orientação de interface, organização de informações e fluxos acessíveis para o público comum.",
+    "about": "O JuriX Cidadão é um espaço para organizar uma demanda antes de dar o próximo passo. O cidadão registra seu relato, reúne referências de documentos e provas e prepara um dossiê. A interface também apresenta orientações técnicas sobre os Juizados Especiais e o eproc, com linguagem acessível.",
     "features": [
-      "Linguagem simples e navegação guiada",
-      "Organização de informações e documentos",
-      "Fluxos de preparação de demandas",
-      "Assistência virtual como direção de desenvolvimento"
+      "Cadastro e edição de casos com o relato do próprio cidadão",
+      "Organização do dossiê e checklist de provas",
+      "Exportação do relatório em texto ou PDF pela impressão do navegador",
+      "Acompanhamento manual de informações do processo",
+      "Guia de utilização com referências oficiais",
+      "Armazenamento local dos casos e exportação de backup"
     ],
-    "note": "Em desenvolvimento. Não substitui aconselhamento jurídico, não garante resultados e não realiza protocolo judicial automático.",
+    "note": "A ferramenta organiza informações; não presta advocacia, não gera estratégias jurídicas e não realiza consulta ou protocolo automático no eproc. Casos e rascunhos ficam no navegador. Pagamentos e acesso comercial dependem de habilitação e validação próprias.",
     "flow": [
       "Conte sua situação",
       "Organize informações",
       "Prepare o próximo passo"
     ],
-    "source": "/products/jurix/"
+    "source": "/products/jurix/",
+    "media": [
+      {
+        "file": "jurix-opening.png",
+        "caption": "Tela de abertura do JuriX Cidadão, com a identidade atual do aplicativo."
+      }
+    ]
   },
   {
     "id": "adhub",
@@ -124,56 +161,11 @@
       "Prepare a campanha",
       "Programe a exibição"
     ],
-    "photo": "adhub.webp"
-  },
-  {
-    "id": "oraculum",
-    "name": "Oraculum",
-    "category": "Acesso & conhecimento",
-    "status": "Em desenvolvimento",
-    "color": "#aac7f6",
-    "logo": null,
-    "headline": "Entender é ir além da resposta.",
-    "summary": "Inteligência artificial como apoio à interpretação de textos, questões e atividades de estudo.",
-    "audience": "Estudantes e pessoas em processo de aprendizado.",
-    "about": "O Oraculum explora a combinação de visão computacional, reconhecimento de textos e modelos de linguagem para apoiar a compreensão de conteúdos apresentados digitalmente. O objetivo é ajudar a interpretar e construir um caminho de resolução.",
-    "features": [
-      "Interpretação de conteúdo digital",
-      "Reconhecimento de textos",
-      "Análise assistida de questões",
-      "Apoio ao processo de estudo"
-    ],
-    "note": "Ferramenta em desenvolvimento. Respostas de IA devem ser revisadas; o uso deve respeitar as regras da instituição e da atividade educacional.",
-    "flow": [
-      "Leia o conteúdo",
-      "Explore a questão",
-      "Construa entendimento"
-    ],
-    "source": "/products/oraculum/"
-  },
-  {
-    "id": "autobook",
-    "name": "AutoBook",
-    "category": "Mídia & conexão",
-    "status": "Preparação de lançamento",
-    "color": "#acbbfb",
-    "logo": "autobook-logo.png",
-    "headline": "Quem faz o setor acontecer, junto.",
-    "summary": "Comunidade para aproximar técnicos, lojas e fornecedores do setor de telefonia.",
-    "audience": "Profissionais, lojas, assistências e fornecedores de telefonia.",
-    "about": "O AutoBook integra o ecossistema AutoZap com uma proposta de comunidade especializada. Um espaço pensado para trocar experiências, descobrir conexões e aproximar quem atua no mesmo mercado.",
-    "features": [
-      "Comunidade profissional especializada",
-      "Conexões entre lojas e fornecedores",
-      "Troca de experiências do setor",
-      "Integração à visão do ecossistema AutoZap"
-    ],
-    "note": "Em preparação de lançamento. A publicação nas lojas de aplicativos ainda depende de etapas de distribuição e validação.",
-    "flow": [
-      "Encontre pessoas",
-      "Troque experiências",
-      "Crie conexões"
-    ],
-    "source": "/autozap/autobook/"
+    "media": [
+      {
+        "file": "adhub-site.png",
+        "caption": "Captura da página do AdHub e acesso à demonstração de pontos de mídia."
+      }
+    ]
   }
 ]

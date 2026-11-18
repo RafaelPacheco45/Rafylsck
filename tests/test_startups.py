@@ -7,8 +7,8 @@ class Parser(HTMLParser):
  def handle_starttag(self,tag,attrs):self.tags.append((tag,dict(attrs)))
 class StartupTests(unittest.TestCase):
  def setUp(self):self.data=json.loads((R/'startups/projects.json').read_text(encoding="utf-8"));self.pages=list((R/'startups').rglob('index.html'))
- def test_seven_projects_and_eight_pages(self):
-  self.assertEqual(len(self.data),7);self.assertEqual(len(self.pages),8)
+ def test_five_projects_and_six_pages(self):
+  self.assertEqual(len(self.data),5);self.assertEqual(len(self.pages),6)
  def test_pages_semantics_and_links(self):
   for page in self.pages:
    with self.subTest(page=page):
@@ -31,9 +31,25 @@ class StartupTests(unittest.TestCase):
   before={p:p.read_bytes() for p in self.pages}
   subprocess.run(['python',str(R/'scripts/build-startups.py')],check=True)
   self.assertEqual(before,{p:p.read_bytes() for p in self.pages})
- def test_safe_progressive_enhancement(self):
+ def test_minimal_directory_and_excluded_projects(self):
   s=(R/'startups/index.html').read_text(encoding="utf-8")
-  self.assertEqual(s.count('data-startup-category='),7)
-  self.assertIn('aria-label="Filtrar startups por área" hidden',s)
-  self.assertIn('prefers-reduced-motion:reduce',(R/'css/startups.css').read_text(encoding="utf-8"))
+  p=Parser();p.feed(s)
+  self.assertEqual(sum(a.get('class')=='startup-choice' for t,a in p.tags),5)
+  for excluded in ('oraculum','autobook'):
+   self.assertNotIn(excluded,s.lower())
+   self.assertFalse((R/'startups'/excluded/'index.html').exists())
+  self.assertNotIn('startup-filters',s)
+  self.assertNotIn('hero-constellation',s)
+  self.assertIn('background:#000',(R/'css/startups.css').read_text(encoding="utf-8"))
+ def test_project_images_and_current_logos(self):
+  for project in self.data:
+   with self.subTest(project=project['id']):
+    self.assertTrue((R/'assets/logos'/project['logo']).is_file())
+    self.assertGreater(len(project['media']),0)
+    page=(R/'startups'/project['id']/'index.html').read_text(encoding="utf-8")
+    for item in project['media']:
+     self.assertTrue((R/'assets/startups'/item['file']).is_file())
+     self.assertIn(item['file'],page)
+    for excluded in ('oraculum','autobook'):
+     self.assertNotIn('/startups/'+excluded+'/',page)
 if __name__=='__main__':unittest.main()
