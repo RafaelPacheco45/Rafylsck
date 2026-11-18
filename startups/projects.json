@@ -1,0 +1,179 @@
+[
+  {
+    "id": "teseu",
+    "name": "Teseu",
+    "category": "Espaços inteligentes",
+    "status": "Em desenvolvimento",
+    "color": "#a5e3ca",
+    "logo": "teseu-logo.webp",
+    "headline": "O caminho entre procurar e encontrar.",
+    "summary": "Navegação e descoberta de espaços para conectar visitantes, lojas e produtos.",
+    "audience": "Shoppings, mercados e grandes espaços comerciais.",
+    "about": "O Teseu explora uma forma mais simples de se orientar em ambientes internos: acessar pelo celular, encontrar um destino e entender o caminho. A proposta une mapas, busca assistida e oportunidades de comunicação para os estabelecimentos.",
+    "features": [
+      "Acesso pelo navegador e QR code",
+      "Mapas e orientação em ambientes internos",
+      "Busca por lojas e produtos",
+      "Possibilidades de publicidade no percurso"
+    ],
+    "note": "Projeto em desenvolvimento. Mapas, integrações e experiências de navegação dependem de configuração e validação em cada local.",
+    "flow": [
+      "Encontre um destino",
+      "Veja o caminho",
+      "Explore o espaço"
+    ]
+  },
+  {
+    "id": "autozap",
+    "name": "AutoZap",
+    "category": "Gestão & automação",
+    "status": "Plataforma em evolução",
+    "color": "#7ed9ef",
+    "logo": "autozap-logo.png",
+    "headline": "Uma operação inteira. Mais conectada.",
+    "summary": "Gestão, atendimento e inteligência artificial para lojas e assistências de telefonia.",
+    "audience": "Lojas de celulares, assistências técnicas e operações do setor.",
+    "about": "O AutoZap reúne a rotina comercial e o relacionamento com clientes em um ecossistema de ferramentas. Do atendimento no WhatsApp à organização da loja, a proposta é reduzir tarefas repetitivas e aproximar informação, equipe e operação.",
+    "features": [
+      "Atendimento e automação no WhatsApp",
+      "Clientes, orçamentos e ordens de serviço",
+      "Estoque, precificação e rotinas financeiras",
+      "Agenda e lembretes de compromissos",
+      "Zappy: assistência de IA dentro do aplicativo",
+      "Logic: construção visual de fluxos de IA"
+    ],
+    "note": "Disponibilidade e configuração variam por módulo. Integrações externas, recursos fiscais e campanhas podem exigir contas, créditos ou habilitações próprias.",
+    "flow": [
+      "Atenda",
+      "Organize",
+      "Automatize"
+    ],
+    "source": "/products/autozap/",
+    "photo": "autozap.webp"
+  },
+  {
+    "id": "anjoguard",
+    "name": "AnjoGuard",
+    "category": "Cuidado & assistência",
+    "status": "Pesquisa & desenvolvimento",
+    "color": "#e8d3a1",
+    "logo": "anjoguard-logo.png",
+    "headline": "Tecnologia mais perto de quem precisa.",
+    "summary": "Pesquisa em IA, sensores e dispositivos para apoiar o cuidado de pessoas idosas.",
+    "audience": "Familiares, cuidadores e contextos de assistência residencial.",
+    "about": "O AnjoGuard investiga como software e dispositivos físicos podem colaborar na rotina de cuidado. Monitoramento, identificação de eventos e uma caixa de medicamentos fazem parte da visão do projeto, sempre como apoio à supervisão humana.",
+    "features": [
+      "Estudo de monitoramento assistido por IA",
+      "Integração entre sensores e software",
+      "Conceito de caixa de medicamentos",
+      "Apoio à rotina de familiares e cuidadores"
+    ],
+    "note": "Projeto de pesquisa. Não é equipamento médico aprovado, não oferece diagnóstico e não substitui profissionais de saúde ou supervisão humana.",
+    "flow": [
+      "Perceber eventos",
+      "Organizar a rotina",
+      "Apoiar o cuidado"
+    ],
+    "source": "/research/anjoguard/"
+  },
+  {
+    "id": "jurix",
+    "name": "JuriX",
+    "category": "Acesso & conhecimento",
+    "status": "Em desenvolvimento",
+    "color": "#d6bcf3",
+    "logo": "jurix-logo.png",
+    "headline": "Menos barreiras. Mais clareza.",
+    "summary": "Uma experiência guiada para organizar informações e tornar o contexto jurídico mais compreensível.",
+    "audience": "Pessoas que precisam entender e organizar uma demanda jurídica.",
+    "about": "O JuriX parte de uma ideia simples: lidar com documentos e informações jurídicas não deveria exigir dominar uma linguagem difícil. O projeto trabalha com orientação de interface, organização de informações e fluxos acessíveis para o público comum.",
+    "features": [
+      "Linguagem simples e navegação guiada",
+      "Organização de informações e documentos",
+      "Fluxos de preparação de demandas",
+      "Assistência virtual como direção de desenvolvimento"
+    ],
+    "note": "Em desenvolvimento. Não substitui aconselhamento jurídico, não garante resultados e não realiza protocolo judicial automático.",
+    "flow": [
+      "Conte sua situação",
+      "Organize informações",
+      "Prepare o próximo passo"
+    ],
+    "source": "/products/jurix/"
+  },
+  {
+    "id": "adhub",
+    "name": "AdHub",
+    "category": "Mídia & conexão",
+    "status": "Protótipo em validação",
+    "color": "#f3b184",
+    "logo": "adhub-logo.webp",
+    "headline": "Sua mensagem encontra o mundo real.",
+    "summary": "Publicidade em telas que conecta anunciantes e espaços de exibição.",
+    "audience": "Anunciantes e estabelecimentos com televisores ou telas.",
+    "about": "O AdHub propõe uma rede de mídia em espaços físicos. Estabelecimentos cadastram pontos de exibição; anunciantes organizam campanhas e escolhem onde aparecer. O foco está em aproximar a mensagem de um contexto real de consumo.",
+    "features": [
+      "Cadastro de estabelecimentos e telas",
+      "Organização de campanhas e conteúdo",
+      "Seleção de diferentes pontos de exibição",
+      "Programação de anúncios"
+    ],
+    "note": "Protótipo em validação. Operação comercial, pagamentos e exibição em televisores reais ainda exigem validação antes de um lançamento completo.",
+    "flow": [
+      "Escolha os espaços",
+      "Prepare a campanha",
+      "Programe a exibição"
+    ],
+    "photo": "adhub.webp"
+  },
+  {
+    "id": "oraculum",
+    "name": "Oraculum",
+    "category": "Acesso & conhecimento",
+    "status": "Em desenvolvimento",
+    "color": "#aac7f6",
+    "logo": null,
+    "headline": "Entender é ir além da resposta.",
+    "summary": "Inteligência artificial como apoio à interpretação de textos, questões e atividades de estudo.",
+    "audience": "Estudantes e pessoas em processo de aprendizado.",
+    "about": "O Oraculum explora a combinação de visão computacional, reconhecimento de textos e modelos de linguagem para apoiar a compreensão de conteúdos apresentados digitalmente. O objetivo é ajudar a interpretar e construir um caminho de resolução.",
+    "features": [
+      "Interpretação de conteúdo digital",
+      "Reconhecimento de textos",
+      "Análise assistida de questões",
+      "Apoio ao processo de estudo"
+    ],
+    "note": "Ferramenta em desenvolvimento. Respostas de IA devem ser revisadas; o uso deve respeitar as regras da instituição e da atividade educacional.",
+    "flow": [
+      "Leia o conteúdo",
+      "Explore a questão",
+      "Construa entendimento"
+    ],
+    "source": "/products/oraculum/"
+  },
+  {
+    "id": "autobook",
+    "name": "AutoBook",
+    "category": "Mídia & conexão",
+    "status": "Preparação de lançamento",
+    "color": "#acbbfb",
+    "logo": "autobook-logo.png",
+    "headline": "Quem faz o setor acontecer, junto.",
+    "summary": "Comunidade para aproximar técnicos, lojas e fornecedores do setor de telefonia.",
+    "audience": "Profissionais, lojas, assistências e fornecedores de telefonia.",
+    "about": "O AutoBook integra o ecossistema AutoZap com uma proposta de comunidade especializada. Um espaço pensado para trocar experiências, descobrir conexões e aproximar quem atua no mesmo mercado.",
+    "features": [
+      "Comunidade profissional especializada",
+      "Conexões entre lojas e fornecedores",
+      "Troca de experiências do setor",
+      "Integração à visão do ecossistema AutoZap"
+    ],
+    "note": "Em preparação de lançamento. A publicação nas lojas de aplicativos ainda depende de etapas de distribuição e validação.",
+    "flow": [
+      "Encontre pessoas",
+      "Troque experiências",
+      "Crie conexões"
+    ],
+    "source": "/autozap/autobook/"
+  }
+]
